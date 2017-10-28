@@ -59,6 +59,9 @@
                         <a href="data-customer.php"><i class="fa fa-fw fa-book"></i> Data Customer</a>
                     </li>
                     <li>
+                        <a href="input_data_training.php"><i class="fa fa-fw fa-book"></i> Input Data Training</a>
+                    </li>
+                    <li>
                         <a href="data-barang.php"><i class="fa fa-fw fa-th"></i> Data Barang</a>
                     </li>
                     <li>
@@ -94,20 +97,7 @@
                 
 
                 
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-area-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 
                 <!-- /.row -->
 
