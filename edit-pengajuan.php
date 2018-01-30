@@ -54,6 +54,9 @@
                     <li>
                         <a href="data-customer.php"><i class="fa fa-fw fa-book"></i> Data Customer</a>
                     </li>
+                    <li>
+                        <a href="input_data_training.php"><i class="fa fa-fw fa-book"></i> Input Data Training</a>
+                    </li>
                     <li class="active">
                         <a href="data-barang.php"><i class="fa fa-fw fa-table"></i> Data Barang</a>
                     </li>
@@ -100,34 +103,51 @@
                             ?>
                             <div class="col-md-10">
                                 <br><br><br>
-                                <form class="form-horizontal" action="#" method="POST">
+                                <form class="form-horizontal" action="simpan-edit-pengajuan.php" method="POST">
                                     <input type="hidden" name="id_pengajuan" value="<?php echo $id_pengajuan ?>">
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4" for="nama_barang">Nama Customer :</label>
+                                        <label class="control-label col-sm-4" for="nama_cust">Nama Customer :</label>
                                         <div class="col-sm-6">
-                                            <input type="nama_cust" class="form-control" name="nama_cust" value="<?php echo $data['nama_cust']; ?>" readonly>
+                                            <input type="hidden" class="form-control" name="nama_cust" value="<?php echo $data['id_customer']; ?>">
+                                            <input type="text" class="form-control" name="" value="<?php echo $data['nama_cust']; ?>" readonly>
+                                            
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Barang :</label>
                                         <div class="col-sm-6">
-                                            <select class="form-control" name="lama">
+                                            <select class="form-control" name="nama_barang">
                                             <?php
 
                                                 if ($data['id_barang'] == 1) {
                                                     echo '<option value="1" selected> '.$data['nama_barang'].' </option>';
                                                 } else {
-                                                    echo '<option value="1"> '.$data['nama_barang'].' </option>';
+                                                    echo '<option value="1"> panci </option>';
                                                 }
                                                 if ($data['id_barang'] == 2) {
                                                     echo '<option value="2" selected> '.$data['nama_barang'].' </option>';
                                                 } else {
-                                                    echo '<option value="2"> '.$data['nama_barang'].' </option>';
+                                                    echo '<option value="2"> kompor sugo </option>';
                                                 }
                                                 if ($data['id_barang'] == 3) {
                                                     echo '<option value="3" selected> '.$data['nama_barang'].' </option>';
                                                 } else {
-                                                    echo '<option value="3"> '.$data['nama_barang'].' </option>';
+                                                    echo '<option value="3"> europa pot </option>';
+                                                }
+                                                if ($data['id_barang'] == 4) {
+                                                    echo '<option value="4" selected> '.$data['nama_barang'].' </option>';
+                                                } else {
+                                                    echo '<option value="4"> sugo pot </option>';
+                                                }
+                                                if ($data['id_barang'] == 5) {
+                                                    echo '<option value="5" selected> '.$data['nama_barang'].' </option>';
+                                                } else {
+                                                    echo '<option value="5"> 7 cooker </option>';
+                                                }
+                                                if ($data['id_barang'] == 6) {
+                                                    echo '<option value="6" selected> '.$data['nama_barang'].' </option>';
+                                                } else {
+                                                    echo '<option value="6"> golden wok </option>';
                                                 }
                                             
                                             ?>
