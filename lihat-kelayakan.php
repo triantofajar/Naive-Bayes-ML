@@ -149,6 +149,14 @@
                         <td><input type="hidden" name="penghasilan" value="<?php echo $data['penghasilan']; ?>"><?php echo $data['penghasilan']; ?></td>
                         <td><input type="hidden" name="jml_ang_kel" value="<?php echo $data['jml_ang_kel']; ?>"><?php echo $data['jml_ang_kel']; ?></td>
                         <td><input type="hidden" name="status_rumah" value="<?php echo $data['status_rumah']; ?>"><?php echo $data['status_rumah']; ?></td>
+                        <td><?php 
+                                if($data['status_kelayakan']==1){
+                                    echo "layak";
+                                }else{
+                                    echo "tidak layak";
+                                } 
+                            ?>            
+                        </td>
                         <td><input type="submit" value="Status Kelayakan" class="btn btn-danger"></td>
                         
                     </tbody>
