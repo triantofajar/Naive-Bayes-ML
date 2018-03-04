@@ -57,6 +57,9 @@
                                         <a href="data-customer.php"><i class="fa fa-fw fa-book"></i> Data Customer</a>
                                     </li>
                                     <li>
+                                        <a href="input_data_training.php"><i class="fa fa-fw fa-book"></i> Input Data Training</a>
+                                    </li>
+                                    <li>
                                         <a href="data-barang.php"><i class="fa fa-fw fa-table"></i> Data Barang</a>
                                     </li>
                                     <li class="active">
@@ -97,7 +100,7 @@
                         </div>
                         <ul id="tambah" class="collapse">
                         <div class="content">
-                            <form role="form" method="POST" action="simpan-pengajuan.php" name="form" class="ui form segment">
+                            <form role="form" method="POST" action="simpan-pengajuan.php" name="form" class="ui form segment" id='form1'>
                                 <div class="col-lg-12">
                                     <div class="col-lg-3">
                                         <div class="form-group">
@@ -201,9 +204,16 @@
                                             echo '<td>'.$data['nama_cust'].'</td>';
                                             echo '<td>'.$data['nama_barang'].'</td>';
                                             echo '<td>'.$data['lama_angsuran'].'</td>';
-                                            echo '<td>'.$data['jml_angs'].'</td>';
-                                            echo '<td>'.$data['status'].'</td>';
-                                            echo '<td>'.$data['tgl_pengajuan'].'</td>';
+                                            echo '<td>'.$data['jml_angs'].'</td>';?>
+                                            <td> <?php if($data['status']==1){
+                                                        echo "Layak";
+                                                    }else{
+                                                        echo "Tidak Layak";
+                                                    } ?>
+                                            </td>
+                                            
+
+                                            <?php echo '<td>'.$data['tgl_pengajuan'].'</td>';
                                             echo '<td><a href=edit-pengajuan.php?id_pengajuan='.$data['id_pengajuan'].'><span class="glyphicon glyphicon-edit"></a></td>';
                                                 echo '<td><a href=hapus_pengajuan.php?id_pengajuan='.$data['id_pengajuan'].'><span class="glyphicon glyphicon-remove-sign"></a></td>';
                                             echo '</tr>';
@@ -227,6 +237,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+ </script>   
 
 </body>
 
